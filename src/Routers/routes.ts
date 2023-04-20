@@ -1,29 +1,24 @@
 import React from 'react';
-import { Home } from '../pages/Home';
-import { About } from '../pages/About';
-import { Contact } from '../pages/Contact/contact';
+
+import { Favorites } from '../pages/Favorites/Favorites';
+import AllNotes from '../pages/AllNotes/AllNotes';
 
 export type TMapRoutes = {
   label: string;
   path: string;
-  // eslint-disable-next-line no-undef
   component: React.FC;
 };
 
 export const routes: TMapRoutes[] = [
   {
-    label: 'Home',
-    path: '/',
-    component: Home,
+    label: 'Todos os Recados',
+    path: '/allnotes',
+    component: AllNotes,
   },
+
   {
-    label: 'About',
-    path: '/about',
-    component: About,
-  },
-  {
-    label: 'Contact',
-    path: '/contact',
-    component: Contact,
+    label: 'Favoritos',
+    path: '/favoritos',
+    component: Favorites,
   },
 ];

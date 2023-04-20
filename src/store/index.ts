@@ -3,7 +3,7 @@ import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import RootReducer from './modules/RootReducer';
 
-const persistedReducer = persistReducer({ key: 'KeyTemplate', storage }, RootReducer);
+const persistedReducer = persistReducer({ key: 'recados', storage }, RootReducer);
 
 export const store = configureStore({
   reducer: persistedReducer,

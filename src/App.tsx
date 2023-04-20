@@ -3,7 +3,7 @@ import { CssBaseline } from '@mui/material';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Routers } from './Routers/Routers';
-import { DefaultLayout } from './config/layout/DefaultLayout';
+
 import { persistor, store } from './store';
 
 function App() {
@@ -12,9 +12,7 @@ function App() {
       <PersistGate persistor={persistor}>
         <BrowserRouter>
           <CssBaseline />
-          <DefaultLayout>
-            <Routers />
-          </DefaultLayout>
+          <Routers />
         </BrowserRouter>
       </PersistGate>
     </Provider>
