@@ -1,5 +1,5 @@
 import React from 'react';
-import Notes from '../AddNotes';
+import Notes from '../Notes';
 import { useAppSelector } from '../../store/hooks';
 import { selectAll } from '../../store/modules/NotesSlice';
 

@@ -2,9 +2,9 @@ import { Route, Routes } from 'react-router-dom';
 import { routes } from './routes';
 import { SignIn } from '../pages/SignIn';
 import SignUp from '../pages/SignUp/SignUp';
-import Notes from '../pages/AddNotes/Notes';
 import { selectAll } from '../store/modules/NotesSlice';
 import { useAppSelector } from '../store/hooks';
+import Notes from '../pages/Notes';
 
 export function Routers() {
   const notesRedux = useAppSelector(selectAll);

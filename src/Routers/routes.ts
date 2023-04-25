@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Favorites } from '../pages/Favorites/Favorites';
-import AllNotes from '../pages/AllNotes/AllNotes';
+import AllNotes from '../pages/ListNotes/ListNotes';
 
 export type TMapRoutes = {
   label: string;

@@ -9,14 +9,14 @@ const adapter = createEntityAdapter<User>({
 
 export const { selectAll, selectById } = adapter.getSelectors((state: RootState) => state.users);
 
-const NotesSlice = createSlice({
+const UserSlice = createSlice({
   name: 'Usuarios',
   initialState: adapter.getInitialState(),
   reducers: {
-    addNote: adapter.addOne,
-    removeNote: adapter.removeOne,
+    addUser: adapter.addOne,
+    removeUser: adapter.removeOne,
   },
 });
 
-export const { addNote, removeNote } = NotesSlice.actions;
-export default NotesSlice.reducer;
+export const { addUser, removeUser } = UserSlice.actions;
+export default UserSlice.reducer;

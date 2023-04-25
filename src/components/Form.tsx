@@ -25,7 +25,6 @@ const Form: React.FC<FormProps> = ({ mode, textButton }) => {
 
   useEffect(() => {
     if (mode === 'signup') {
-      // método string - endsWith() - boolean
       const emailValid = (email.endsWith('.com') || email.endsWith('.com.br')) && email.includes('@');
 
       if (email.length > 0) {
@@ -46,8 +45,6 @@ const Form: React.FC<FormProps> = ({ mode, textButton }) => {
       setDisabled(!(emailValid && passwordValid && repasswordValid));
     }
   }, [email, password, repassword, mode]);
-
-  // log
   useEffect(() => {
     localStorage.setItem('listaUsuarios', JSON.stringify(users));
   }, [users]);
@@ -75,7 +72,6 @@ const Form: React.FC<FormProps> = ({ mode, textButton }) => {
       setRepassword('');
       alert('Usuario cadastrado com sucesso');
     } else {
-      // eslint-disable-next-line max-len
       const usuarioEncontrado = users.find((valor) => valor.email === email && valor.password === password);
       if (usuarioEncontrado) {
         navigate('/notes');

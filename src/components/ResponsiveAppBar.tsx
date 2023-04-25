@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { Badge } from '@mui/material';
 import { routes } from '../Routers/routes';
@@ -18,7 +18,7 @@ const BADGE_CONTENT = 0;
 
 function ResponsiveAppBar() {
   const navigate = useNavigate();
-  const title = 'Template';
+  const title = 'Recados';
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -38,8 +38,6 @@ function ResponsiveAppBar() {
             <Typography
               variant="h6"
               noWrap
-              component={Link}
-              to="/"
               sx={{
                 mr: 2,
                 display: { xs: 'none', md: 'flex' },
@@ -99,8 +97,6 @@ function ResponsiveAppBar() {
           <Typography
             variant="h5"
             noWrap
-            component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'flex', md: 'none' },
