@@ -14,6 +14,7 @@
   },
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
+    "react/jsx-wrap-multilines": "off",
     "react/jsx-fragments": "off",
     "import/newline-after-import": "warn",
     "max-len": "off",

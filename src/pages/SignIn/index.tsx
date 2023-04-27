@@ -7,19 +7,7 @@ import HeaderForm from '../../components/HeaderForm';
 
 export const SignIn: React.FC = () => {
   return (
-    <Grid container height="100vh">
-      <Grid
-        item
-        xs={false}
-        sm={4}
-        md={7}
-        sx={{
-          backgroundImage: 'url(https://source.unsplash.com/random)',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repete',
-        }}
-      />
+    <Grid container height="100vh" display="flex" justifyContent="center" alignItems="center">
       <Grid item xs={12} sm={8} md={5}>
         <Box
           component="section"

@@ -1,10 +1,11 @@
 import { BrowserRouter } from 'react-router-dom';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, ThemeProvider } from '@mui/material';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Routers } from './Routers/Routers';
 
 import { persistor, store } from './store';
+import defaultTheme from './config/theme/defaultTheme';
 
 function App() {
   return (
@@ -12,7 +13,9 @@ function App() {
       <PersistGate persistor={persistor}>
         <BrowserRouter>
           <CssBaseline />
-          <Routers />
+          <ThemeProvider theme={defaultTheme}>
+            <Routers />
+          </ThemeProvider>
         </BrowserRouter>
       </PersistGate>
     </Provider>

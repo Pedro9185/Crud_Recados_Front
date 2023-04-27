@@ -133,7 +133,6 @@ const Form: React.FC<FormProps> = ({ mode, textButton }) => {
           />
         ) : (
           <FormControlLabel
-            // eslint-disable-next-line max-len
             control={<Checkbox checked={remember} onChange={(ev) => setRemember(ev.target.checked)} />}
             label="Permanecer conectado"
           />
