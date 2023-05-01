@@ -1,21 +1,20 @@
-import { Route, Routes } from 'react-router-dom';
-import { routes } from './routes';
-import { SignIn } from '../pages/SignIn';
-import SignUp from '../pages/SignUp/SignUp';
-import { selectAll } from '../store/modules/NotesSlice';
-import { useAppSelector } from '../store/hooks';
-import Notes from '../pages/Notes';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-export function Routers() {
-  const notesRedux = useAppSelector(selectAll);
+import Notes from '../pages/Notes/Notes';
+import SignIn from '../pages/SignIn/SignIn';
+import SignUp from '../pages/SignUp/SignUp';
+
+const Routers: React.FC = () => {
   return (
-    <Routes>
-      {routes.map((route) => (
-        <Route key={route.path} path={route.path} element={<route.component />} />
-      ))}
-      <Route path="/" element={<SignIn />} />
-      <Route path="/signup" element={<SignUp />} />
-      <Route path="/notes" element={<Notes data={notesRedux} />} />
-    </Routes>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/notes" element={<Notes />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
+
+export default Routers;

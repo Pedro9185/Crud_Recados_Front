@@ -1,4 +1,4 @@
-function generateID(){
+function generateID() {
   return new Date().getTime();
 }
 

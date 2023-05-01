@@ -14,11 +14,9 @@
   },
   "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
-    "react/jsx-wrap-multilines": "off",
-    "react/jsx-fragments": "off",
-    "import/newline-after-import": "warn",
+    "import/extensions": "off",
+    "no-param-reassign": "off",
     "max-len": "off",
-    "no-unused-vars": "warn",
     "object-curly-newline": "off",
     "prettier/prettier": "error",
     "arrow-body-style": "off",
