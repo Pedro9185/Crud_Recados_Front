@@ -38,7 +38,7 @@ const Notes: React.FC = () => {
   const [openEdit, setOpenEdit] = React.useState(false);
 
   useEffect(() => {
-    if (!userLogged) {
+    if (!userLogged.email) {
       navigate('/');
     }
   }, []);
