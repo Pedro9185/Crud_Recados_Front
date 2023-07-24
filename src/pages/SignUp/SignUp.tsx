@@ -14,9 +14,9 @@ const SignUp: React.FC = () => {
       alignItems="center"
       justifyContent="center"
       width="100vw"
-      bgcolor="#002884"
+      bgcolor="ButtonShadow"
     >
-      <Grid item xs={12} sm={8} md={5} sx={{ borderRadius: '25px', backgroundColor: '#757ce8' }}>
+      <Grid item xs={12} sm={8} md={5} sx={{ borderRadius: '25px', backgroundColor: '#ffff' }}>
         <Box component="section" marginY={8} marginX={4} display="flex" flexDirection="column" alignItems="center">
           <HeaderForm color={green[500]} icon={<VerifiedUser />} title="Cadastre-se" />
           <Form mode="signup" textButton="Criar conta" />

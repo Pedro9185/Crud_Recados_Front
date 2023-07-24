@@ -15,9 +15,9 @@ const SignIn: React.FC = () => {
       alignItems="center"
       justifyContent="center"
       width="100vw"
-      bgcolor="#002884"
+      bgcolor="ButtonShadow"
     >
-      <Grid item xs={12} sm={8} md={5} sx={{ borderRadius: '25px', backgroundColor: '#757ce8' }}>
+      <Grid item xs={12} sm={8} md={5} sx={{ borderRadius: '25px', backgroundColor: '#fff' }}>
         <Box component="section" marginY={8} marginX={4} display="flex" flexDirection="column" alignItems="center">
           <HeaderForm color={pink[500]} icon={<LockOpenOutlined />} title="Acessar mural de recados" />
           <Form mode="signin" textButton="Entrar" />

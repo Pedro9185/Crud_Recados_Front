@@ -1,15 +1,28 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 import UserType from '../../Types/UserType';
 import TaskType from '../../Types/TaskType';
+import { getTaskAsynkThunk } from './TaskSlice';
 
 interface UserState {
   user: UserType;
 }
 
+interface Login {
+  email: string;
+  password: string;
+}
+
 const initialState: UserState = {
   user: { email: '', password: '', tasks: [] },
 };
+
+export const loginAsyncThunk = createAsyncThunk('/login', async (data: Login, { dispatch }) => {
+  const response = await fetch('http:localhost:8080/login', { method: 'POST', body: JSON.stringify(data) });
+
+  const body = await response.json();
+  dispatch(getTaskAsynkThunk(body));
+});
 
 export const UserSlice = createSlice({
   name: 'user',
